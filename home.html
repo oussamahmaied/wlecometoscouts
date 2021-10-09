@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>scouts home page</title>
+</head>
+<body>
+    <img src="./images/logo.png" alt="logo" height="10%" width="10%">
+    <br>
+    <div class="topnav">
+        <a class="active" href="./home.html">Home</a>
+        <a href="./activities.html" >activities</a>
+        <a href="./joinus.html">join us</a>
+        <a href="#about">About us</a>
+      </div>
+
+      <div class="divmain"> 
+        <h1 class="white middle">What is scouting?</h1>
+        <p class="white middle">Scouting is all about building confidence and self-esteem, learning important life skills and leadership skills, team building, outdoor adventure, education, and fun! Scouts learn how to make good choices and to take responsibility for their actions so that they are prepared for their adult life as independent persons.</p>
+        </div><br><br>
+        <div class="container divgallery">
+
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+                <img src="./gallerypics/10815550973_0946663645_o.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+                <img src="./gallerypics/108995298_10157476629016914_7198471371705839456_n.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+                <img src="./gallerypics/109966589_10157476629241914_6791969109319870859_n.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+                <img src="./gallerypics/110017237_10157476629181914_2634211073867745835_n.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">5 / 6</div>
+                <img src="./gallerypics/241081284_4245643358876650_2987146201649000970_n.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+                <img src="./gallerypics/241270282_4245639292210390_2416503130618069401_n.jpg" style="width:100%">
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+            <!-- Image text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+          
+            <!-- Thumbnail images -->
+            <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="./gallerypics/10815550973_0946663645_o.jpg" style="width:100%" onclick="currentSlide(1)" alt="heyy">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./gallerypics/108995298_10157476629016914_7198471371705839456_n.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./gallerypics/109966589_10157476629241914_6791969109319870859_n.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./gallerypics/110017237_10157476629181914_2634211073867745835_n.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./gallerypics/241081284_4245643358876650_2987146201649000970_n.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./gallerypics/241270282_4245639292210390_2416503130618069401_n.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+              </div>
+            </div>
+          </div>
+      
+<script src="./script.js"></script>
+</body>
+</html>
