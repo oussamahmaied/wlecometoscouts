@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>join us</title>
+</head>
+<body>
+    <img src="./images/logo.png" alt="logo" height="20%" width="20%">
+    <br>
+    <div class="topnav">
+        <a href="./home.html">Home</a>
+        <a href="./activities.html" >activities</a>
+        <a class="active" href="./joiunus.html">join us</a>
+        <a href="./aboutus.html">About us</a>
+      </div> <br><br><br>
+      <form action="" class="divform">
+        <div>
+          <br>
+          <h3>your name</h3>
+          <input id="inpfn" type="text" placeholder="your name ...">
+          <h3>your last name</h3>
+          <input id="inpln" type="text" placeholder="your last name ...">
+          <h3>your e-mail</h3>
+          <input id="inpmail" type="text" placeholder="your email ...">
+          <h3>your age</h3>
+          <input id="inpage" type="text" placeholder="your age ...">
+          <h3>you will join as:</h3>
+          <input id="inpchoice" type="text" placeholder="cub/scout/rover/leader">
+          <button id="btninsert">insert your data</button>
+        </div>
+        <div id="output"></div>
+      </form>
+     
+<p style="color: aqua; text-align: center;"></p>
+      <script type="text/javascript">
+        const inpfn= document.getElementById("inpfn");
+        const inpln= document.getElementById("inpln");
+        const inpmail= document.getElementById("inpmail")
+        const inpage= document.getElementById("inpage")
+        const inpchoice= document.getElementById("inpchoice")
+        const output= document.getElementById("output")
+
+
+        btninsert.onclick = function() {
+          const fname= inpfn.value;
+          const lname=inpln.value;
+          const age=inpage.value;
+          const email= inpmail.value;
+          const choice=inpchoice;
+
+          console.log(fname)
+          console.log(lname)
+          console.log(age)
+          console.log(email)
+          console.log(choice)
+
+          if (key && value && age && email && choice){
+            localStorage.setItem(key,value,age,email,choice);
+            location.reload();
+          }
+        }
+
+        for( var i=0; i<localStorage.length; i++){
+          const fname = localStorage.key(i);
+          const value = localStorage.getItem(fname);
+          const key = localStorage.key(i);
+          output.innerHTML+=`<p class="">${fname}</p>`
+          const lname = localStorage.key(i);
+          const value = localStorage.getItem(lname);
+          const key = localStorage.key(i);
+          output.innerHTML+=`<p class="">${fname}</p>`
+          const age = localStorage.key(i);
+          const value = localStorage.getItem(age);
+          const key = localStorage.key(i);
+          output.innerHTML+=`<p class="">${age}</p>`
+          const fname = localStorage.key(i);
+          const value = localStorage.getItem(email);
+          const key = localStorage.key(i);
+          output.innerHTML+=`<p class="">${email}</p>`
+          const value = localStorage.getItem(choice);
+          const key = localStorage.key(i);
+          output.innerHTML+=`<p class="">${choice}</p>`
+        }
+      </script>
+</body>
+</html>
