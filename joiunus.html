@@ -19,11 +19,13 @@
       </div> <br><br><br>
       <form action="" class="divform">
         <div>
+          <h1 style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif;">You want to join us?</h1>
+          <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">please fill this form</h3>
           <br>
           <h3>your name</h3>
-          <input id="inpfn" type="text" placeholder="your name ...">
+          <input id="inpkey" type="text" placeholder="your name ...">
           <h3>your last name</h3>
-          <input id="inpln" type="text" placeholder="your last name ...">
+          <input id="inpvalue" type="text" placeholder="your last name ...">
           <h3>your e-mail</h3>
           <input id="inpmail" type="text" placeholder="your email ...">
           <h3>your age</h3>
@@ -32,59 +34,30 @@
           <input id="inpchoice" type="text" placeholder="cub/scout/rover/leader">
           <button id="btninsert">insert your data</button>
         </div>
-        <div id="output"></div>
+        <br><br><br><br><br><br>
+        <div id="output" class="divmain white" style="font-size: 25px; font-family: Verdana, Geneva, Tahoma, sans-serif;"></div>
       </form>
      
 <p style="color: aqua; text-align: center;"></p>
-      <script type="text/javascript">
-        const inpfn= document.getElementById("inpfn");
-        const inpln= document.getElementById("inpln");
-        const inpmail= document.getElementById("inpmail")
-        const inpage= document.getElementById("inpage")
-        const inpchoice= document.getElementById("inpchoice")
-        const output= document.getElementById("output")
-
-
-        btninsert.onclick = function() {
-          const fname= inpfn.value;
-          const lname=inpln.value;
-          const age=inpage.value;
-          const email= inpmail.value;
-          const choice=inpchoice;
-
-          console.log(fname)
-          console.log(lname)
-          console.log(age)
-          console.log(email)
-          console.log(choice)
-
-          if (key && value && age && email && choice){
-            localStorage.setItem(key,value,age,email,choice);
-            location.reload();
-          }
-        }
-
-        for( var i=0; i<localStorage.length; i++){
-          const fname = localStorage.key(i);
-          const value = localStorage.getItem(fname);
-          const key = localStorage.key(i);
-          output.innerHTML+=`<p class="">${fname}</p>`
-          const lname = localStorage.key(i);
-          const value = localStorage.getItem(lname);
-          const key = localStorage.key(i);
-          output.innerHTML+=`<p class="">${fname}</p>`
-          const age = localStorage.key(i);
-          const value = localStorage.getItem(age);
-          const key = localStorage.key(i);
-          output.innerHTML+=`<p class="">${age}</p>`
-          const fname = localStorage.key(i);
-          const value = localStorage.getItem(email);
-          const key = localStorage.key(i);
-          output.innerHTML+=`<p class="">${email}</p>`
-          const value = localStorage.getItem(choice);
-          const key = localStorage.key(i);
-          output.innerHTML+=`<p class="">${choice}</p>`
-        }
-      </script>
+<script type="text/javascript">
+  const inpkey= document.getElementById("inpkey");
+  const inpvalue= document.getElementById("inpvalue");
+  const output= document.getElementById("output")
+  btninsert.onclick = function() {
+    const key= inpkey.value;
+    const value=inpvalue.value;
+    console.log(key)
+    console.log(value)
+    if (key && value){
+      localStorage.setItem(key,value);
+      location.reload();
+    }
+  }
+  for( var i=0; i<localStorage.length; i++){
+    const key = localStorage.key(i);
+    const value = localStorage.getItem(key);
+    output.innerHTML+=`welcome <br>${key} ${value} <br> you are now one of us`
+    }
+</script>
 </body>
 </html>
